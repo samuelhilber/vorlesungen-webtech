@@ -43,7 +43,7 @@ array[2]= (a,b) => a-b;
 const k = [1,2,3,4,5,6,7]
 let zwischensumme = 0
 for (let i = 0; i<k.length; i++){
-    zwischensumme += a[i];
+    zwischensumme += k[i];
 }
 
 const l = [1,2,3,4,5,6,7]
@@ -116,7 +116,8 @@ console.log(array)
 console.log(typeof array)
 console.log(array[2](1,2)) /* so kann auf eine Function in einem Array zugegriffen werden*/
 
-console.log(zwischensumme);
+console.log(zwischensumme)
+console.log(typeof zwischensumme)
 
 l.forEach(ausgabe)
 console.log("-------")
