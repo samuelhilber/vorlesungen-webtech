@@ -40,25 +40,25 @@ array[0]=1;
 array[1]=2;
 array[2]= (a,b) => a-b;
 
-const k = [1,2,3,4,5,6,7,]
+const k = [1,2,3,4,5,6,7]
 let zwischensumme = 0
 for (let i = 0; i<k.length; i++){
     zwischensumme += a[i];
 }
 
-const l = [1,2,3,4,5,6,7,]
+const l = [1,2,3,4,5,6,7]
 const m= l.filter((wert) => { // find kann für filter eingesetzt werden Fitlter gibt jedes True aus find nur das erste!!
     if (wert % 2 == 0) return true;
     else return false;
 });  // doppel Klammer für function aufruf filter zweite für den Parameter Wert 
 
-const o = [1,2,3,4,5,6,7,]
+const o = [1,2,3,4,5,6,7]
 const n = o.map((wert)=>{  // gibt nur "true / false " auf die functions nicht 2 / 4 / 6 // map ändert ab
     if (wert % 2 == 0) return true;
     else return false;
 }); 
 
-const s = [1,2,3,4,5,6,7,]
+const s = [1,2,3,4,5,6,7]
 const r= l.filter((wert) => { 
     if (wert % 2 == 0) return true;
     else return false;
@@ -69,7 +69,7 @@ const r= l.filter((wert) => {
     // hier wird zuerst aus l nur die gerade werte ausgelesen und diese dann in "true" umgewandelt siehe mann kann direkt an das ().map an docken an die vorheringen functions
 
 
-const q = [1,2,3,4,5,6,7,]
+const q = [1,2,3,4,5,6,7]
 const p = q.reduce((alterW, w) =>{ // in dieser Function wird die zahlen Summe genommen reduce kann den vom "vorherigen durchlauf" den Wert speichern hier "alterW"
     return alterW + w
 })
