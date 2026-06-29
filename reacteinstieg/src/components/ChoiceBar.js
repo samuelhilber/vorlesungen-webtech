@@ -1,13 +1,6 @@
 import React from "react";
  
-export default function ChoiceBar({title, percent, startwert}) {
-
-    const [count, setCount ] = React.useState(startwert);
-
-    function handleClick() {
-        setCount(count + 1);
-    }
-
+export default function ChoiceBar({title, percent, count, handleClick}) {
     return <div className="ChoiceBar" onClick={ handleClick }>
         <div className="Progress" style={   {width: percent + "%" } }>
             <div className="ChoiceBarTitle">{ title }</div>
