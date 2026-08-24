@@ -5,7 +5,15 @@ import VoteComposer from "./VoteComposer";
 
 export default function VoteController({ alleFragen }) {
   const [VoteComposerActive, setVoteComposerActive] = React.useState(false);
-  const [activeQuestion, setActiveQuestion] = React.useState(alleFragen);
+  const [activeQuestion, setActiveQuestion] = React.useState([]);
+
+  const ajaxload = () => {
+    fetch("http://localhost:8080/")
+      .then((response) => response.json)
+      .then((json) => {
+        setAktiveFragen(json);
+      });
+  };
 
   const addQuestion = (newQuestion) => {
     const newActiveQuestion = [...activeQuestion, newQuestion];
