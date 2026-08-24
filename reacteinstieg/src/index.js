@@ -18,6 +18,7 @@ const umfragen = [
       { title: "Netzwerk", count: 0, key: "Antw5" },
     ],
   },
+
   {
     key: "Frage2",
     frage: "Programmiersprachen",

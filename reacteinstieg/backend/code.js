@@ -5,7 +5,7 @@ const filename = "datenbank.json";
 const server = http.createServer((request, response) => {
   const method = request.method;
   response.setHeader("Content-Type", "application/json");
-  response.setHeader("Access-Control-Allow-Origon", "*");
+  response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
 
   if (method == "GET") {

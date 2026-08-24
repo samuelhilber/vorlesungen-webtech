@@ -9,15 +9,21 @@ export default function VoteController({ alleFragen }) {
 
   const ajaxload = () => {
     fetch("http://localhost:8080/")
-      .then((response) => response.json)
+      .then((response) => response.json())
       .then((json) => {
-        setAktiveFragen(json);
+        setActiveQuestion(json);
       });
   };
+
+  React.useEffect(ajaxload, []);
 
   const addQuestion = (newQuestion) => {
     const newActiveQuestion = [...activeQuestion, newQuestion];
     setActiveQuestion(newActiveQuestion);
+    fetch("http://localhost:8080/", {
+      method: "POST",
+      body: JSON.stringify(newActiveQuestion),
+    });
     hideVoteComposer();
   };
 
